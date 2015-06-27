@@ -6,7 +6,7 @@
   .controller('Home', [
     function(){
 
-      console.log('Home')
+      console.log('Home');
 
     }]);
 

@@ -10,7 +10,15 @@
       $routeProvider.when('/', {
         controller:   'Home',
         templateUrl:  'js/home/home.tpl.html'
+      })
+
+      .when('/:id', {
+
+        controller: 'singleUser',
+        templateUrl: 'js/User/singleUser.tpl.html'
+
       });
+
 
    }]);
 
