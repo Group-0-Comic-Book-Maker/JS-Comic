@@ -5,7 +5,7 @@
 
   angular.module('app')
 
-  .service('SingleUserService', ['$http', ENDPOINT, '$rootScope',
+  .service('SingleUserService', ['$http', 'ENDPOINT', '$rootScope',
 
     function ($http, ENDPOINT, $rootScope) {
 
@@ -13,11 +13,9 @@
       var endpoint = //whatever the endpoint is.
 
 
-       this.getCookies = function() {
+      this.getCookies = function() {
         return $http.get()
-       }
-
-
+      };
 
       this.getUser = function (id) {
         return $http.get(endpoint + id, ENDPOINT.CONFIG);
@@ -27,12 +25,12 @@
         return $http.get(endpoint + imgId, ENDPOINT.CONFIG);
       };
 
+
+
+
+
     }
-
-
    ]);
-
-
 }());
 
 

@@ -7,26 +7,37 @@
   .controller('singleUser', ['$scope', 'SingleUserService', '$routeParams',
 
 
-  function ($scope, SingleUserService, $routeParams) {
+    function ($scope, SingleUserService, $routeParams) {
+
+      console.log('user page');
+
+      var id = $routeParams.id;
+
+      // SingleUserService.getUser(id).success( function (data) {
+      //   $scope.user = data;
+      // });
+
+    var counter = 0;
+
+    $scope.addToCanvas = function() {
 
 
-    var id = $routeParams.id;
-    SingleUserService.getUser(id).success( function (data) {
+        $('canvas').drawImage({
+          layer: true,
+          draggable: true,
+          bringToFront: true,
+          source: 'http://lorempixel.com/300/400/',
+          width: 300,
+          height: 400,
+          x: 250 + counter, y: 250,
+          crossOrigin: 'anonymous',
 
-      $scope.user = data;
-
-    });
-
-  }
-
+        });
+          counter += 350,
+          console.log(counter)
+      };
 
 
+    }
     ]);
-
-
-
-
-
-
-
 }());

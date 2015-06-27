@@ -1,18 +1,25 @@
-<h2>Welcome, {{ .name }}</h2>
 
 
-<div class="imgCard">
-  <div class="dark card">
-    <img src="{{}}">
-    <div class="card-divider">
+<ul>
+  <li ng-repeat="c in cardList">
+    <div class="imgCard">
+      <div class="dark card">
+        <img src=>  <!-- PLACEHOLER -->
+        <div class="card-divider"></div>
+        <div class="card-section">
+          <p>{{c.text}}</p>
+        </div>
+      </div>
     </div>
-    <div class="card-section">
-    <h4>{{}}</h4>
-    <p>{{}}</p>
-    </div>
-  </div>
-</div>
+  </li>
+</ul>
 
+
+
+<img src="http://lorempixel.com/300/400/" alt="" id="pic1" ng-click="addToCanvas()">
+
+
+<canvas width='1200' height='500' style="border:1px solid #d3d3d3;"></canvas>
 
 
 
