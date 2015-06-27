@@ -4,12 +4,12 @@
 
   angular.module('app')
 
-  .service('HomeService', [
-    function(){
+  .service('HomeService', ['$http', 'ENDPOINT',
+    function($http, ENDPOINT){
 
-      this.log = function() {
-        console.log('hello');
-      };
+      this.getPhotos = function() {
+        $http.post(ENDPOINT.URL + 'photos/users', ENDPOINT.CONFIG)
+      }
 
     }]);
 

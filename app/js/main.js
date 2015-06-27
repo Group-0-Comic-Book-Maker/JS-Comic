@@ -5,10 +5,10 @@
   angular.module('app', ['ngRoute'])
 
   .constant('ENDPOINT', {
-    URL: 'https://',
+    URL: 'https://evening-escarpment-7913.herokuapp.com',
     CONFIG: {
       headers: {
-       'Auth-Token': Cookies.get('Auth-Token')
+       'access_token': Cookies.get('access_token')
       }
     }
   })
@@ -22,7 +22,7 @@
       })
 
 
-      .when('/:id', {
+      .when('/user/', {
 
         controller: 'singleUser',
         templateUrl: 'js/user/singleUser.tpl.html'

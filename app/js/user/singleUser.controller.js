@@ -36,8 +36,15 @@
           console.log(counter)
       };
 
-    }
-    ]);
+      $scope.save = function () {
+          $('canvas').saveCanvas();
+          var image = $('canvas').getCanvasImage('png');
+          var a = $("<a>").attr("href", image).attr("download", "img.png").appendTo("body");
+          a[0].click();
+          a.remove();
+        };
+
+    }]);
 }());
 
 

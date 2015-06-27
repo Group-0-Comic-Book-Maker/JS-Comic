@@ -4,25 +4,26 @@
 
   angular.module('app')
 
-  .service('LoginService', ['$http', '$rootScope', 'ENDPOINT',
-    function($http, $rootScope, ENDPOINT){
+  .service('LoginService', ['$http', 'ENDPOINT',
+    function($http, ENDPOINT){
 
       var User = function(options) {
         this.username = options.username;
         this.password = options.password;
+        this.email    = options.email;
       };
 
       this.addUser = function(u) {
-        var x = new User(u);
+        var user = new User(u);
 
-        $http.post(ENDPOINT.URL + 'users/', x, ENDPOINT.CONFIG)
+        $http.post(ENDPOINT.URL + '/users/register', user, ENDPOINT.CONFIG)
 
       };
 
       this.loginUser = function(u) {
-        var x = new User(u);
+        var user = new User(u);
 
-        $http.get(ENDPOINT.URL + 'login/', ENDPOINT.CONFIG)
+        $http.post(ENDPOINT.URL + '/users/login', user, ENDPOINT.CONFIG)
 
       }
 
