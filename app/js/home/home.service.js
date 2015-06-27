@@ -7,7 +7,9 @@
   .service('HomeService', [
     function(){
 
-
+      this.log = function() {
+        console.log('hello');
+      };
 
     }]);
 
