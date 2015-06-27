@@ -4,6 +4,15 @@
 
   angular.module('app', ['ngRoute'])
 
+  .constant('ENDPOINT', {
+    URL: 'https://',
+    CONFIG: {
+      headers: {
+       'Auth-Token': Cookies.get('Auth-Token')
+      }
+    }
+  })
+
   .config(['$routeProvider',
     function($routeProvider){
 
