@@ -3,10 +3,10 @@
   'use strict';
 
   angular.module('app')
-  .controller('Home', [
-    function(){
+  .controller('Home',  [ "HomeService",
+    function(HomeService){
 
-      console.log('Home')
+      HomeService.log();
 
     }]);
 

@@ -4,11 +4,11 @@
 
   angular.module('app')
 
-  .service('HomeService', [
+  .service('LoginService', [
     function(){
 
-      this.log = function() {
-        console.log('hello');
+      this.login = function() {
+        console.log('LOGIN PAGE');
       };
 
     }]);

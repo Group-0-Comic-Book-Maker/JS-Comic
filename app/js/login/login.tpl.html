@@ -1,0 +1,18 @@
+<div class="loginWrapper">
+  <h1>Zero Issue</h1>
+
+  <form ng-submit="loginUser(userLogin)">
+    <div class="row">
+      <div class="large-6 large-offset-3 columns">
+        <label>
+          <input type="text" placeholder="Username" ng-model="userLogin.username" required>
+        </label>
+        <label>
+          <input type="password" placeholder="Password" ng-model="userLogin.password" required>
+        </label>
+        <button>Login</button>
+      </div>
+    </div>
+  </form>
+        <a href="#/signup">Sign Up</a>
+</div>
