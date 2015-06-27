@@ -21,7 +21,6 @@
 
     $scope.addToCanvas = function() {
 
-
         $('canvas').drawImage({
           layer: true,
           draggable: true,
@@ -37,7 +36,8 @@
           console.log(counter)
       };
 
-
     }
     ]);
 }());
+
+
