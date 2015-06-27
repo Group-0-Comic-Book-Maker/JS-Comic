@@ -22,7 +22,7 @@
       })
 
 
-      .when('/user', {
+      .when('/:id', {
 
         controller: 'singleUser',
         templateUrl: 'js/user/singleUser.tpl.html'
