@@ -43,7 +43,7 @@ gulp.task('webserver', function() {
   return gulp.src('app')
     .pipe(server({
       livereload: true,
-      // open: true // Uncomment if you want it to open the project for you
+      open: true // Uncomment if you want it to open the project for you
     }));
 });
 
