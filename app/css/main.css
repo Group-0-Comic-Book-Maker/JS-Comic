@@ -24,6 +24,9 @@ header {
 .signupBtn {
   color: black; }
 
+.navContainer {
+  width: 100vw; }
+
 nav {
   z-index: -1;
   width: 105%;
@@ -86,7 +89,8 @@ nav {
 
 body {
   font-family: "Bangers", cursive;
-  letter-spacing: 5px; }
+  letter-spacing: 5px;
+  overflow-x: hidden; }
 
 h1 {
   font-family: "Bangers", cursive;
