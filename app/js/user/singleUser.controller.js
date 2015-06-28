@@ -36,7 +36,7 @@
           source: url,
           width: 297,
           height: 527,
-          x: 5 + counter, y: 5,
+          x: 200 + counter, y: 300,
           crossOrigin: 'anonymous',
 
         });

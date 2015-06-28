@@ -184,4 +184,5 @@ a {
 .photo {
   margin-bottom: 30px;
   padding: 15px;
-  border: 3px solid black; }
+  border: 3px solid black;
+  cursor: pointer; }
