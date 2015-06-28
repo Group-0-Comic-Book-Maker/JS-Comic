@@ -1,2 +1,53 @@
+<<<<<<< HEAD
 .loginWrapper {
   text-align: center; }
+=======
+.head {
+  width: 100%;
+  height: 270px;
+  overflow: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 16px solid black;
+  background-color: #FFA500; }
+
+img.zero {
+  padding-left: 417px;
+  height: 244px;
+  width: 67%; }
+
+label {
+  font-family: "Bangers", cursive;
+  font-size: 25px; }
+
+img.tone {
+  width: 100%; }
+
+footer {
+  color: black;
+  background-color: #FFA500;
+  padding: 100px 32px 0px 8px;
+  height: 25%; }
+  footer h2 {
+    color: black;
+    font-family: "Bangers", cursive;
+    font-size: 25px;
+    height: 0px; }
+  footer h3 {
+    float: right;
+    font-family: "Bangers", cursive;
+    padding-right: 61px;
+    line-height: 24px;
+    display: block; }
+  footer .fb {
+    margin-left: 96%;
+    width: 2.5%;
+    display: block;
+    height: 25px; }
+  footer .twitter {
+    margin-left: 99%;
+    width: 2%;
+    display: block;
+    position: relative;
+    bottom: 23px; }
+>>>>>>> bd1b26e2ae845fdba11b78fcd1ac6784f055a1ee
