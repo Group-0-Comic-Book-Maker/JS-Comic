@@ -1,3 +1,33 @@
 .loginWrapper {
   text-align: center;
 }
+
+header {
+  height: 110px;
+  width: 493px;
+  margin: 60px auto;
+  background-image: url(/images/logo.png);
+  background-repeat: no-repeat;
+
+}
+
+.loginBtn {
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+  transition: all 0.3s ease;
+  margin-top: 30px;
+
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+}
+
+.loginField:focus {
+  border: 3px solid black;
+}
+
+.signupBtn {
+  color: black;
+}

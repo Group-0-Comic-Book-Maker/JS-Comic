@@ -1,29 +1,3 @@
-.loginWrapper {
-  text-align: center; }
-
-header {
-  height: 110px;
-  width: 493px;
-  margin: 60px auto;
-  background-image: url(/images/logo.png);
-  background-repeat: no-repeat; }
-
-.loginBtn {
-  background-color: transparent;
-  color: black;
-  border: 2px solid black;
-  transition: all 0.3s ease;
-  margin-top: 30px; }
-  .loginBtn:hover {
-    background-color: black;
-    color: white; }
-
-.loginField:focus {
-  border: 3px solid black; }
-
-.signupBtn {
-  color: black; }
-
 nav {
   z-index: -1;
   width: 105%;
@@ -83,21 +57,3 @@ nav {
   height: 48px;
   border: 3px solid black;
   margin: 0 auto; }
-
-body {
-  font-family: "Bangers", cursive;
-  letter-spacing: 5px; }
-
-h1 {
-  font-family: "Bangers", cursive;
-  letter-spacing: 5px; }
-
-h4 {
-  font-family: "Bangers", cursive !important; }
-
-button {
-  font-family: "Bangers", cursive;
-  letter-spacing: 5px; }
-
-input {
-  letter-spacing: 5px; }

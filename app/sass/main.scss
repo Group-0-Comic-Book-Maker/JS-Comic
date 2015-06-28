@@ -1,1 +1,25 @@
-@import 'login'
+@import 'login';
+@import 'home';
+
+body {
+  font-family: "Bangers", cursive;
+  letter-spacing: 5px;
+}
+
+h1 {
+  font-family: "Bangers", cursive;
+  letter-spacing: 5px;
+}
+
+h4 {
+  font-family: "Bangers", cursive !important;
+}
+
+button {
+  font-family: "Bangers", cursive;
+  letter-spacing: 5px;
+}
+
+input {
+  letter-spacing: 5px;
+}

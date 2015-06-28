@@ -15,6 +15,7 @@
             console.log(data);
             Cookies.set('access_token', data.access_token, { expires: Infinity });
             Cookies.set('username', data.username, { expires: Infinity });
+            Cookies.set('id', data.id, { expires: Infinity });
 
             window.location.href = '';
           })
@@ -32,6 +33,7 @@
           console.log(data);
           Cookies.set('access_token', data.access_token, { expires: Infinity });
           Cookies.set('username', data.username, { expires: Infinity });
+          Cookies.set('id', data.id, { expires: Infinity });
 
           window.location.href = ''
         })

@@ -10,21 +10,16 @@
     function ($http, ENDPOINT, $rootScope) {
 
 
-      var endpoint = //whatever the endpoint is.
+      var userId = Cookies.get('id')
 
+      this.getUserPhotos = function() {
+        $http.post(ENDPOINT.URL + 'photos/user', ENDPOINT.CONFIG) //URL ENPOINT NEEDS ID FOR THAT USER....
+      }
 
-      this.getCookies = function() {
-        return $http.get()
-      };
-
-      this.getUser = function (id) {
-        return $http.get(ENDPOINT.URL + 'users/', id, ENDPOINT.CONFIG);
-      };
-
-
-      this.getImages = function (imgId) {
-        return $http.post(ENDPOINT.URL + 'photos/user', imgId , ENDPOINT.CONFIG);
-      };
+      this.resetCanvas = function() {
+        $('canvas').clearCanvas();
+        console.log('cleared');
+      }
 
 
 

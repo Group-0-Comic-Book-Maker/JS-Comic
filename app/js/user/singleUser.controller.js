@@ -22,13 +22,11 @@
     $scope.addToCanvas = function() {
 
         $('canvas').drawImage({
-          layer: true,
-          draggable: true,
-          bringToFront: true,
+          // draggable: true,
           source: 'http://lorempixel.com/300/400/',
           width: 300,
           height: 400,
-          x: 250 + counter, y: 250,
+          x: 170 + counter, y: 250,
           crossOrigin: 'anonymous',
 
         });
@@ -43,6 +41,11 @@
           a[0].click();
           a.remove();
         };
+
+      $scope.reset = function() {
+        SingleUserService.resetCanvas();
+        counter = 0;
+      }
 
     }]);
 }());
