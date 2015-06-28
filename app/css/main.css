@@ -22,7 +22,9 @@ header {
   border: 3px solid black; }
 
 .signupBtn {
-  color: black; }
+  background-color: black; }
+  .signupBtn:hover {
+    background-color: #FC6600; }
 
 .navContainer {
   width: 100vw; }
@@ -76,6 +78,21 @@ nav {
   right: 15px;
   font-size: 22px;
   cursor: pointer; }
+  .logout:hover {
+    text-decoration: underline; }
+
+.userWrapper {
+  position: relative;
+  width: 100%; }
+
+.userProf {
+  position: absolute;
+  top: -43px;
+  right: 135px;
+  font-size: 22px;
+  cursor: pointer; }
+  .userProf:hover {
+    text-decoration: underline; }
 
 .present {
   background-color: #FC6600;
@@ -86,6 +103,59 @@ nav {
   height: 48px;
   border: 3px solid black;
   margin: 0 auto; }
+
+.homeWrapper {
+  position: relative;
+  width: 100%; }
+
+.home {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 22px;
+  cursor: pointer; }
+  .home:hover {
+    text-decoration: underline; }
+
+.canvasWrapper {
+  width: 1100px;
+  margin: 0 auto; }
+
+.btnRow {
+  text-align: center;
+  width: 100%;
+  margin-top: 30px; }
+
+.logoUserWrapper {
+  padding: 60px 0;
+  width: 100%;
+  height: 82px;
+  margin-bottom: 60px; }
+
+.logoUser {
+  width: 490px;
+  height: 105px;
+  margin: 0 auto;
+  background-image: url(/images/logo.png);
+  background-repeat: no-repeat; }
+
+.photoWrapper {
+  margin-bottom: 30px;
+  padding-top: 30px; }
+
+.ghostBtn {
+  color: black;
+  background-color: transparent;
+  border: 2px solid black; }
+  .ghostBtn:hover {
+    color: white;
+    background-color: black; }
+
+.userBackground {
+  background: -webkit-linear-gradient(top, #FCFD7C, #FC6600);
+  background: -o-linear-gradient(top, #FCFD7C, #FC6600);
+  background: -moz-linear-gradient(top, #FCFD7C, #FC6600);
+  background: linear-gradient(to top, #FCFD7C, #FC6600); }
 
 body {
   font-family: "Bangers", cursive;
@@ -105,3 +175,13 @@ button {
 
 input {
   letter-spacing: 5px; }
+
+a {
+  color: black; }
+  a:hover {
+    color: black; }
+
+.photo {
+  margin-bottom: 30px;
+  padding: 15px;
+  border: 3px solid black; }

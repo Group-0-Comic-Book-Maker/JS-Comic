@@ -50,6 +50,21 @@ nav {
   right: 15px;
   font-size: 22px;
   cursor: pointer; }
+  .logout:hover {
+    text-decoration: underline; }
+
+.userWrapper {
+  position: relative;
+  width: 100%; }
+
+.userProf {
+  position: absolute;
+  top: -43px;
+  right: 135px;
+  font-size: 22px;
+  cursor: pointer; }
+  .userProf:hover {
+    text-decoration: underline; }
 
 .present {
   background-color: #FC6600;

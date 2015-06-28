@@ -1,5 +1,6 @@
 @import 'login';
 @import 'home';
+@import 'user';
 
 body {
   font-family: "Bangers", cursive;
@@ -23,4 +24,18 @@ button {
 
 input {
   letter-spacing: 5px;
+}
+
+a {
+  color: black;
+
+  &:hover {
+    color: black;
+  }
+}
+
+.photo {
+  margin-bottom: 30px;
+  padding: 15px;
+  border: 3px solid black;
 }

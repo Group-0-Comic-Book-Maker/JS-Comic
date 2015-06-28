@@ -1,28 +1,67 @@
+<div class="userBackground">
+  <div class="homeWrapper">
+    <a href="#/"><div class="home">Home</div></a>
+  </div>
+
+  <div class="logoUserWrapper">
+    <div class="logoUser"></div>
+  </div>
 
 
-<ul>
-  <li ng-repeat="c in cardList">
-    <div class="imgCard">
-      <div class="dark card">
-        <img src=>  <!-- PLACEHOLER -->
-        <div class="card-divider"></div>
-        <div class="card-section">
-          <p>{{c.text}}</p>
+
+
+  <!-- <div class="row photoWrapper">
+    <div class="large-4 columns" ng-click="addToCanvas()">
+      <div class="imgCard">
+        <div class="dark card">
+          <img src="http://lorempixel.com/300/300/" alt="" id="pic1">
+          <div class="card-divider"></div>
+          <div class="card-section">
+            <p>{{c.text}}</p>
+          </div>
         </div>
       </div>
     </div>
-  </li>
-</ul>
+    <div class="large-4 columns" ng-click="addToCanvas()">
+      <div class="imgCard">
+        <div class="dark card">
+          <img src="http://lorempixel.com/300/300/" alt="" id="pic1">
+          <div class="card-divider"></div>
+          <div class="card-section">
+            <p>{{c.text}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="large-4 columns" ng-click="addToCanvas()">
+      <div class="imgCard">
+        <div class="dark card">
+          <img src="http://lorempixel.com/300/300/" alt="" id="pic1">
+          <div class="card-divider"></div>
+          <div class="card-section">
+            <p>{{c.text}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
 
 
 
-<img src="http://lorempixel.com/300/400/" alt="" id="pic1" ng-click="addToCanvas()">
-
-<button ng-click="reset()">Reset</button>
-
-<canvas width='1400' height='500' style="border:1px solid #d3d3d3;"></canvas>
-
-<button ng-click="save()">Download</button>
+  <div class="row photoWrapper">
+    <div class="photo large-4 columns" ng-repeat="p in photoList">
+      <img src="{{p.image_url}}"  id="pic1" ng-click="addToCanvas(p.image_url)">
+    </div>
+  </div>
 
 
 
+  <div class="canvasWrapper">
+    <canvas width='1100px' height='500' style="border:3px solid black; background-color: white;"></canvas>
+  </div>
+
+  <div class="btnRow">
+    <button class="ghostBtn" ng-click="save()">Download</button>
+    <button class="ghostBtn" ng-click="reset()">Reset</button>
+  </div>
+</div>

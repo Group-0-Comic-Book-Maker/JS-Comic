@@ -4,26 +4,21 @@
   </nav>
 </div>
 
-  <div class="logWrapper">
-    <div ng-click="logout()" class="logout">Logout</div>
-  </div>
-  <div class="banner">
-    <div class="tiy"></div>
-  </div>
-  <div class="present">
-    <h4>Presents...</h4>
-  </div>
+<div class="logWrapper">
+  <div ng-click="logout()" class="logout">Logout</div>
+</div>
+<div class="userWrapper">
+  <a href="#/user"><div class="userProf">My Photos</div></a>
+</div>
+<div class="banner">
+  <div class="tiy"></div>
+</div>
+<div class="present">
+  <h4>Presents...</h4>
+</div>
 
-<ul>
-  <li ng-repeat="c in photoList">
-    <div class="imgCard">
-      <div class="dark card">
-        <img src>  <!-- PLACEHOLER -->
-        <div class="card-divider"></div>
-        <div class="card-section">
-          <p>{{c.text}}</p>
-        </div>
-      </div>
+<div class="row photoWrapper">
+    <div class="photo large-4 columns" ng-repeat="p in photoList">
+      <img src="{{p.image_url}}" alt="" id="pic1">
     </div>
-  </li>
-</ul>
+</div>

@@ -4,35 +4,39 @@
 
   angular.module('app')
 
-  .controller('singleUser', ['$scope', 'SingleUserService', '$routeParams',
+  .controller('singleUser', ['$scope', 'ENDPOINT', '$http', 'SingleUserService', '$routeParams',
 
 
-    function ($scope, SingleUserService, $routeParams) {
-
+    function ($scope, ENDPOINT, $http, SingleUserService, $routeParams) {
 
 
     $scope.photoList = [];
 
-    $scope.getPhotos = function() {
-      $http.post(ENDPOINT.URL + 'photos/user', ENDPOINT.CONFIG)
+
+    $http.get(ENDPOINT.URL + '/photos/users', ENDPOINT.CONFIG)
         .success(function(data){
 
-          console.log(data); /// <----- WILL NEED RIGHT KEY
+          $scope.photoList = _.map(data, function(d){
 
-          $scope.photoList = data;
+            return (d.photo_info);
+          });
+
+          console.log($scope.photoList)
         })
-    };
+
 
     var counter = 0;
 
-    $scope.addToCanvas = function() {
+    $scope.addToCanvas = function(url) {
+
+      console.log(url);
 
         $('canvas').drawImage({
           draggable: true,
-          source: 'http://lorempixel.com/300/400/',
-          width: 300,
-          height: 400,
-          x: 170 + counter, y: 250,
+          source: url,
+          width: 297,
+          height: 527,
+          x: 5 + counter, y: 5,
           crossOrigin: 'anonymous',
 
         });

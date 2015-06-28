@@ -29,5 +29,9 @@ header {
 }
 
 .signupBtn {
-  color: black;
+  background-color: black;
+
+  &:hover {
+    background-color: #FC6600;
+  }
 }

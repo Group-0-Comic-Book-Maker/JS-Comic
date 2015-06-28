@@ -22,4 +22,6 @@ header {
   border: 3px solid black; }
 
 .signupBtn {
-  color: black; }
+  background-color: black; }
+  .signupBtn:hover {
+    background-color: #FC6600; }

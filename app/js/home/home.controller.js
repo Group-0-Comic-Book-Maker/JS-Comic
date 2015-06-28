@@ -8,15 +8,17 @@
 
       $scope.photoList = [];
 
-      $scope.getPhotos = function() {
-        $http.post(ENDPOINT.URL + 'photos/users', ENDPOINT.CONFIG)
-          .success(function(data){
+      $http.get(ENDPOINT.URL + '/photos/users', ENDPOINT.CONFIG)
+        .success(function(data){
 
-            console.log(data); /// <----- WILL NEED RIGHT KEY
+          $scope.photoList = _.map(data, function(d){
 
-            $scope.photoList = data;
-          })
-      };
+            return (d.photo_info);
+          });
+
+          console.log($scope.photoList)
+        })
+
 
 
       $scope.logout = function() {
