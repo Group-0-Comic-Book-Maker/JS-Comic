@@ -9,20 +9,26 @@
 
     function ($scope, SingleUserService, $routeParams) {
 
-      console.log('user page');
 
-      var id = $routeParams.id;
 
-      // SingleUserService.getUser(id).success( function (data) {
-      //   $scope.user = data;
-      // });
+    $scope.photoList = [];
+
+    $scope.getPhotos = function() {
+      $http.post(ENDPOINT.URL + 'photos/user', ENDPOINT.CONFIG)
+        .success(function(data){
+
+          console.log(data); /// <----- WILL NEED RIGHT KEY
+
+          $scope.photoList = data;
+        })
+    };
 
     var counter = 0;
 
     $scope.addToCanvas = function() {
 
         $('canvas').drawImage({
-          // draggable: true,
+          draggable: true,
           source: 'http://lorempixel.com/300/400/',
           width: 300,
           height: 400,
@@ -43,8 +49,7 @@
         };
 
       $scope.reset = function() {
-        SingleUserService.resetCanvas();
-        counter = 0;
+        window.location.reload();
       }
 
     }]);

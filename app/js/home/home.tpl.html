@@ -5,7 +5,7 @@
 </div>
 
   <div class="logWrapper">
-    <div class="logout">Logout</div>
+    <div ng-click="logout()" class="logout">Logout</div>
   </div>
   <div class="banner">
     <div class="tiy"></div>
@@ -18,7 +18,7 @@
   <li ng-repeat="c in photoList">
     <div class="imgCard">
       <div class="dark card">
-        <img src={{c.url_link}}>  <!-- PLACEHOLER -->
+        <img src>  <!-- PLACEHOLER -->
         <div class="card-divider"></div>
         <div class="card-section">
           <p>{{c.text}}</p>

@@ -3,44 +3,48 @@
   'use strict';
 
   angular.module('app')
-  .controller('Login',  [ '$scope', 'LoginService', '$http', '$location',
-    function($scope, LoginService, $http, $location){
+  .controller('Login',  [ '$scope', 'LoginService', '$http', '$location', 'ENDPOINT',
+    function($scope, LoginService, $http, $location, ENDPOINT){
 
-      $scope.loginUser = function(u){
+      $scope.loginUser = function(u) {
+        var user = new User(u);
 
-        console.log(u);
+        console.log(user);
 
-        LoginService.loginUser(u)
+        $http.post(ENDPOINT.URL + '/users/login', user, ENDPOINT.CONFIG)
           .success(function(data){
-            console.log(data);
-            Cookies.set('access_token', data.access_token, { expires: Infinity });
-            Cookies.set('username', data.username, { expires: Infinity });
-            Cookies.set('id', data.id, { expires: Infinity });
-
-            window.location.href = '';
-          })
-           .error(function(data){
-            console.log(data);
-        });
-       };
-
-       $scope.addUser = function(u) {
-
-        console.log(u)
-
-        LoginService.addUser(u)
-          .success(function(data){
-          console.log(data);
-          Cookies.set('access_token', data.access_token, { expires: Infinity });
-          Cookies.set('username', data.username, { expires: Infinity });
-          Cookies.set('id', data.id, { expires: Infinity });
+            console.log(data.user);
+          Cookies.set('access_token', data.user.access_token, { expires: Infinity });
+          Cookies.set('username', data.user.username, { expires: Infinity });
+          Cookies.set('id', data.user.id, { expires: Infinity });
 
           window.location.href = ''
         })
-        .error(function(data){
-          console.log(data);
-        });
-       };
+      };
+
+
+      var User = function(options) {
+        this.username = options.username;
+        this.password = options.password;
+        this.email    = options.email;
+      };
+
+      $scope.addUser = function(u) {
+        var user = new User(u);
+
+        console.log(user);
+
+        $http.post(ENDPOINT.URL + '/users/register', user, ENDPOINT.CONFIG)
+          .success(function(data){
+            console.log(data.user);
+          Cookies.set('access_token', data.user.access_token, { expires: Infinity });
+          Cookies.set('username', data.user.username, { expires: Infinity });
+          Cookies.set('id', data.user.id, { expires: Infinity });
+
+          window.location.href = ''
+        })
+
+      };
 
 
     }]);

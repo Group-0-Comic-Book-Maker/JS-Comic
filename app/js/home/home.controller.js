@@ -8,13 +8,26 @@
 
       $scope.photoList = [];
 
-      HomeService.getPhotos()
-        .success(function(data){
-          console.log(data);
+      $scope.getPhotos = function() {
+        $http.post(ENDPOINT.URL + 'photos/users', ENDPOINT.CONFIG)
+          .success(function(data){
 
-          $scope.photoList = data;
+            console.log(data); /// <----- WILL NEED RIGHT KEY
 
-        })
+            $scope.photoList = data;
+          })
+      };
+
+
+      $scope.logout = function() {
+
+        Cookies.expire('id');
+        Cookies.expire('access_token');
+        Cookies.expire('username');
+
+        $location.path('/login');
+
+      };
 
     }]);
 
