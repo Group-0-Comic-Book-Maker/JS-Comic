@@ -19,9 +19,11 @@
     "jquery": "~2.1.4",
     "underscore": "~1.8.3",
     "normalize.css": "~3.0.3",
+    "handlebars": "~3.0.3",
     "angular": "~1.4.1",
     "foundation": "~5.5.2",
-    "angular-route": "~1.4.1"
+    "angulike": "~1.2.0",
+    "font-awesome": "~4.3.0"
   },
   "devDependencies": {
     "mocha": "~2.2.5",
