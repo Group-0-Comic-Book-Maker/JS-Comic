@@ -1,8 +1,8 @@
-;(function (){
+// angular.module('myApp', [])
 
-  'use strict';
+// .controller('zero-issueCtrl', function($scope){
+//   $scope.image = "images/zero-issue.png";
 
-  angular.module('app', ['ngRoute'])
 
   .constant('ENDPOINT', {
     URL: 'https://evening-escarpment-7913.herokuapp.com',
@@ -44,3 +44,5 @@
    }]);
 
 }());
+// });
+

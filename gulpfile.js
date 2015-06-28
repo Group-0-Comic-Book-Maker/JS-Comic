@@ -1,4 +1,5 @@
 var gulp        = require('gulp');
+var handlebars  = require('gulp-handlebars');
 var wrap        = require('gulp-wrap');
 var declare     = require('gulp-declare');
 var concat      = require('gulp-concat');
@@ -27,6 +28,7 @@ var notifyError = function() {
 gulp.task('watch', ['watchlist', 'webserver']);
 
 gulp.task('watchlist', function() {
+  gulp.watch('./app/templates/*.hbs', ['handlebars']);
   gulp.watch('./app/sass/*.scss',     ['sass']);
   gulp.watch('./bower.json',      ['bower']);
   gulp.watch('./app/index.html',      ['hint:html']);
@@ -51,11 +53,11 @@ gulp.task('webserver', function() {
 //================================================
 
 gulp.task('hint:js', function() {
-  return gulp.src(['./app/js/*.js', './app/js/**/*.js', '!./app/js/vendor/*'])
+  return gulp.src(['./app/js/**/*.js', '!./app/js/templates.js', '!./app/js/vendor/*'])
     .pipe(notifyError())
     .pipe(jshint())
     .pipe(jshint.reporter('fail'))
-    .pipe(jshint.reporter(stylish));
+    .pipe(jshint.reporter('jshint-stylish'));
 });
 
 gulp.task('hint:html', function() {
@@ -70,6 +72,18 @@ gulp.task('hint:html', function() {
 //  COMPILING ASSETS
 //================================================
 
+
+// -- HANDLEBARS TEMPLATES -- //
+
+gulp.task('handlebars', function(){
+  return gulp.src('./app/templates/*.hbs')
+    .pipe(notifyError())
+    .pipe(handlebars())
+    .pipe(wrap('Handlebars.template(<%= contents %>)'))
+    .pipe(declare({namespace: 'hbs'}))
+    .pipe(concat('templates.js'))
+    .pipe(gulp.dest('./app/js/'));
+});
 
 // -- SASS STYLESHEETS -- //
 

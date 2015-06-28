@@ -1,14 +1,14 @@
 {
-  "name": "Template-Angular",
+  "name": "Template",
   "version": "1.0.0",
-  "description": "An AngularJS template for building new apps",
+  "description": "A template for building new apps",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tiy-atl-js-q2-2015/Template-Angular.git"
+    "url": "https://github.com/tiy-atl-js-q2-2015/Template.git"
   },
   "contributors": [
     "JD Isaacks",
@@ -16,13 +16,14 @@
   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tiy-atl-js-q2-2015/Template-Angular/issues"
+    "url": "https://github.com/tiy-atl-js-q2-2015/Template/issues"
   },
-  "homepage": "https://github.com/tiy-atl-js-q2-2015/Template-Angular",
+  "homepage": "https://github.com/tiy-atl-js-q2-2015/Template",
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-concat": "^2.5.2",
     "gulp-declare": "^0.3.0",
+    "gulp-handlebars": "^4.0.0",
     "gulp-htmlhint": "^0.1.1",
     "gulp-jshint": "^1.11.0",
     "gulp-notify": "^2.2.0",
